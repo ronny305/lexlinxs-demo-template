@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LexLinxs Legal Tools</title>
+    <!-- Runtime configuration -->
+    <script src="/env.js"></script>
+    <!-- Google Analytics script (only loaded in production) -->
+    <script>
+      if (window.ENV && window.ENV.GA_MEASUREMENT_ID && window.ENV.FEATURES.ENABLE_ANALYTICS) {
+        const script = document.createElement('script');
+        script.async = true;
+        script.src = `https://www.googletagmanager.com/gtag/js?id=${window.ENV.GA_MEASUREMENT_ID}`;
+        document.head.appendChild(script);
+        
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', window.ENV.GA_MEASUREMENT_ID);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
