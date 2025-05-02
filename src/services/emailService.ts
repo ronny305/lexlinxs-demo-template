@@ -43,7 +43,7 @@ export const sendEmail = async (data: EmailData): Promise<void> => {
     law_firm_name: data.law_firm_name || 'Not provided',
     tool_name: data.toolIdea,
     message: data.message || '',
-    reply_to: 'ron@lexlinxs.com'
+    reply_to: data.email
   };
   
   const config = getEmailJSConfig();
